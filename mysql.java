@@ -8,8 +8,8 @@ public class mysql {
         connection = DriverManager.getConnection(url, "root", "123456");//数据库连接
         try {
             connection.setAutoCommit(false);//开启事务
-            String sql1 = "INSERT INTO `students`.`student` (`studentid`, `name`, `sex`, `age`) VALUES (‘15’, ‘王七’, ‘男’, ‘20’)";
-            String sql2 = "INSERT INTO `students`.`class` (`classid`, `studentid`, `time`) VALUES (‘1’, ’5‘, ’2023-01-12‘)";
+            String sql1 = "INSERT INTO `students`.`student` (`studentid`, `name`, `sex`, `age`) VALUES ('15', '王七', '男', '20')";
+            String sql2 = "INSERT INTO `students`.`class` (`classid`, `studentid`, `time`) VALUES ('1', '5', '2023-01-12')";
             PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
             PreparedStatement preparedStatement2 = connection.prepareStatement(sql2);//获取预处理对象
             preparedStatement1.executeUpdate();
